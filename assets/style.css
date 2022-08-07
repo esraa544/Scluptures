@@ -1,0 +1,365 @@
+/* ==================== GOOGLE FONTS ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
+/* ==================== VARIABLES CSS ==================== */
+:root {
+    --header-height:3rem ;
+
+    /*========== Colors ==========*/
+    --first-color: #c6a15b;
+    --text-color-light: #fff;
+    --text-color-dark: #000;
+    --body-color: linear-gradient(45deg, #272729, #1b1b1d);
+    /*========== Font and typography ==========*/
+    --body-font-family: 'Josefin Sans', sans-serif;
+
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px 11... */
+    --big-font-size:4.5rem ;
+    --h1-font-size:2.5rem;
+    --h2-font-size: 2rem;
+    --h3-font-size: 1.5rem;
+    --normal-font-size: 1.25rem ;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --btn-font-size: 1rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 400;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /*========== Margines Bottom ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --m-0-25: .25rem;
+    --m-0-5: .5rem;
+    --m-0-75: .75rem;
+    --m-1: 1rem;
+    --m-1-5: 1.5rem;
+    --m-2: 2rem;
+    --m-2-5: 2.5rem;
+    --m-3: 3rem;
+    --container-padding: 2rem;
+}
+
+/* Variable For large devices */
+@media screen and (min-width: 968px) {
+    :root {
+        --big-font-size: 2rem;
+        --h1-font-size: 3.5rem;
+        --h2-font-size: 2rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size:1.1rem ;
+        --small-font-size: .875rem;
+        --smaller-font-size: .875rem;
+
+        --container-padding: 4rem;
+    }
+}
+/*==================== BASE ====================*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    position: relative;
+    margin: 0;
+    font-size: var(--normal-font-size);
+    background:  url(../img/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--text-color-dark);
+    font-family: var(--body-font-family);
+    overflow-x: hidden;
+    max-width: 100vw;
+    min-height: 100vh;
+}
+h1,h2,h3,h4{
+    font-weight: var(--font-semi-bold);
+    font-family: var(--body-font-family) , arial;
+}
+ul{
+    list-style: none;
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+    font-family: var(--body-font-family);
+}
+p{
+    font-family: var(--body-font-family);
+}
+/*==================== REUSABLE CSS CLASSES ====================*/
+.container{
+    padding: var(--container-padding);
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.grid{
+    display: grid;
+    gap: 1rem;
+}
+.hidden{
+    display: none;
+}
+header,
+section{
+    position: relative;
+}
+/*==================== Background-Lines ====================*/
+/*
+.bg_line{
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    background-color: #3c3c3e;
+}
+.bg_line:nth-child(1){
+    left: 10vw;
+}
+.bg_line:nth-child(2){
+    left: 30vw;
+}
+.bg_line:nth-child(3){
+    left: 50vw;
+}
+.bg_line:nth-child(4){
+    left: 70vw;
+}
+.bg_line:nth-child(5){
+    left: 90vw;
+}
+@media screen and (max-width: 968px) {
+    .bg_line:nth-child(1){
+        left: 20vw;
+    }
+    .bg_line:nth-child(2){
+        left: 50vw;
+    }
+    .bg_line:nth-child(3){
+        left: 80vw;
+    }
+    .bg_line:nth-child(4),
+    .bg_line:nth-child(5){
+        display: none
+    }
+}
+*/
+/*==================== NavBar ====================*/
+nav{
+    align-items: flex-end !important;
+    gap: 10rem;
+    padding: 1rem 2rem
+}
+nav img{
+    width: 70px;
+}
+nav div{
+    gap: 2rem
+}
+nav div a{
+    color: #fff;
+    transition: .5s;
+}
+nav div a:hover{
+    color: var(--first-color);
+}
+nav div .active{
+    color: var(--first-color);
+}
+@media screen and (max-width: 968px) {
+    nav {
+        gap: 2rem;
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav div a {
+        line-height: 1.2;
+        font-size: 15px;
+    }
+}
+/*==================== Header ====================*/
+.header{
+    justify-content: space-evenly;
+}
+.header img{
+    width: 550px;
+}
+h1{
+    color: var(--first-color);
+    font-size: 130px;
+}
+.menu{
+    display: grid;
+    padding: 2rem .5rem;
+    row-gap: 12rem;
+    background: #000;
+    position: absolute;
+    right: 0;
+    color: var(--first-color);
+    text-align: center;
+    border: 1px solid var(--first-color);
+    border-right: none;
+}
+.menu a{
+    font-size: 12px;
+    padding: 10px 0;
+    cursor: pointer;
+    display: block;
+    transition: .5s;
+}
+.menu i{
+    cursor: pointer;
+    transition: .5s;
+}
+.menu i:hover,
+.menu a:hover{
+    color: var(--first-color);
+}
+@media screen and (max-width: 1265px) {
+    .header img{
+        width: 400px
+    }
+    h1{
+        font-size: 80px;
+    }
+}
+@media screen and (max-width: 968px) {
+    .header{
+        flex-direction: column;
+        padding: 3rem;
+    }
+    .header img{
+        width: 300px
+    }
+    h1{
+        font-size: 50px;
+    }
+}
+@media screen and (max-width: 390px) {
+    .menu{
+        display: none;
+    }
+}
+/*==================== Painting ====================*/
+.painting{
+    margin: 8rem 5rem 4rem;
+}
+.painting h1{
+    text-align: end
+}
+.painting div{
+    gap: 6rem;
+}
+.painting p{
+    text-align: end;
+    color: #fff;
+    font-size: 18px;
+    margin: 1rem 0
+}
+@media screen and (max-width: 1265px) {
+    .painting div {
+        gap: 1rem;
+    }
+    .painting img{
+        width: 250px;
+    }
+}
+@media screen and (max-width: 968px) {
+    .painting {
+        justify-content: center;
+    }
+    .painting img{
+        width: 300px;
+    }
+    .painting div{
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+}
+/*==================== Story ====================*/
+.story{
+    justify-content: center;
+    padding: 3rem;
+}
+.story img{
+    width: 550px;
+}
+.story p{
+    color: #fff;
+    font-size: 15px;
+    max-width: 52rem;
+}
+@media screen and (max-width: 1265px) {
+    .story img{
+        width: 400px;
+    }
+}
+@media screen and (max-width: 968px) {
+    .story {
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .story img{
+        width: 300px;
+    }
+    .story p{
+        color: #fff;
+        font-size: 15px;
+        max-width: 50rem;
+    }
+}
+/*==================== Section_No ====================*/
+.section_no {
+    justify-content: space-between;
+    margin: 1rem 1rem 1rem 10rem;
+}
+.section_no div{
+    gap: 1rem;
+    color: var(--first-color);
+}
+.section_no div a,
+.section_no i{
+    position: relative;
+    color: #ffffff7d;
+    cursor: pointer;
+    transition: .5s;
+}
+.section_no div a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    background-color: #ffffff7d;
+    transition: .5s;
+}
+.section_no div .active{
+    color: var(--first-color);
+    margin-right: 2rem;
+}
+.section_no div .active::before{
+    background-color: var(--first-color);
+    width: 300%;
+}
+.section_no div a:hover,
+.section_no i:hover{
+    color: var(--first-color);
+}
+.section_no div a:hover::before{
+    background-color: var(--first-color);
+}
+@media screen and (max-width: 968px) {
+    .section_no {
+        padding: 1rem;
+        margin: 0
+    }
+}
