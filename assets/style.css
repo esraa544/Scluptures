@@ -160,13 +160,13 @@ section{
 nav{
     align-items: flex-end !important;
     gap: 10rem;
-    padding: 1rem 2rem
+    padding: 1rem 2rem;
 }
 nav img{
     width: 70px;
 }
 nav div{
-    gap: 2rem
+    gap: 2rem;
 }
 nav div a{
     color: #fff;
@@ -184,6 +184,11 @@ nav div .active{
         text-align: center;
         flex-wrap: wrap;
         justify-content: center;
+        padding: 1rem 0rem;
+    }
+    
+    nav div{
+        gap: 1rem;
     }
     nav div a {
         line-height: 1.2;
@@ -230,7 +235,7 @@ h1{
 }
 @media screen and (max-width: 1265px) {
     .header img{
-        width: 400px
+        width: 400px;
     }
     h1{
         font-size: 80px;
@@ -242,7 +247,7 @@ h1{
         padding: 3rem;
     }
     .header img{
-        width: 300px
+        width: 300px;
     }
     h1{
         font-size: 50px;
@@ -258,7 +263,7 @@ h1{
     margin: 8rem 5rem 4rem;
 }
 .painting h1{
-    text-align: end
+    text-align: end;
 }
 .painting div{
     gap: 6rem;
@@ -267,7 +272,7 @@ h1{
     text-align: end;
     color: #fff;
     font-size: 18px;
-    margin: 1rem 0
+    margin: 1rem 0;
 }
 @media screen and (max-width: 1265px) {
     .painting div {
@@ -365,6 +370,6 @@ h1{
 @media screen and (max-width: 968px) {
     .section_no {
         padding: 1rem;
-        margin: 0
+        margin: 0;
     }
 }
