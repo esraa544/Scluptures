@@ -91,6 +91,11 @@ a{
 p{
     font-family: var(--body-font-family);
 }
+@media screen and (max-width: 968px) {
+    body{
+        background:  url(../img/bg1.webp);
+    }
+}
 /*==================== REUSABLE CSS CLASSES ====================*/
 .container{
     padding: var(--container-padding);
